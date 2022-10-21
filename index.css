@@ -1,0 +1,88 @@
+body {
+    background-color: #390099; /*fondo de todo el body*/
+    font-family: Arial, Helvetica, sans-serif; /*tipo de letra*/
+    font-weight: 600;
+    letter-spacing: 0.6px; /*espacio entre letras*/
+    font-size: 16px;
+}
+
+.container {
+    width: 100%; /*ocupa todo el ancho de la pantalla*/
+    height: 100%; /*ocupa todo el alto de la pantalla*/
+    display: flex; /*aplica flexblox*/
+    justify-content: center; /*centra horizontalmente*/
+    align-items: center; /*centra verticalmente*/
+}
+
+.recuadro-login {
+    width: 50%; /*ancho del cuadrado respecto al 100% del container*/
+    height: 60%; /*alto del cuadrado respecto al 100% del container*/
+    background-color: #FF0054; /*fondo del cuadrado login*/
+    border-radius: 20px; /*establece bordes redondeados*/
+    display: flex; /*para que los contenedores hijos acepten las modificaciones de flexbox*/
+    box-shadow: 23px 23px 5px 0px rgba(0,0,0,0.75); /*esto es la sombra del recuadro. se copia de box shadow generator*/
+-webkit-box-shadow: 23px 23px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 23px 23px 5px 0px rgba(0,0,0,0.75);
+}
+
+.container-form {
+    width: 50%; /*ancho del elemeno respecto al contenedor padre (recuadro-login)*/
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 100%; /*respecto del padre*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap; /*en caso de haber muchos elementos juntos, van a bajar los que sobren a la siguiente linea*/
+}
+
+.container-input {
+    margin: 5px 0px; /*de arriba a abajo tiene 5px y de los costados 0px*/
+    display: flex;
+    flex-direction: column; /*ubica a los input debajo de los lebel*/
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    color: white;
+    margin-bottom: 5px; /*margen (debajo) entre el label (este elem) y el input*/
+    width: 70%;
+}
+
+input {
+    width: 70%;
+    border-radius: 20px;
+    height: 40px;
+    border: none; /*elimina los bordes que tiene el input*/
+    padding: 0 20px; /*así se separa el texto del borde*/
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin-top: 20px; /*margen con respecto a la parte de arriba, se despega del ultimo input*/
+    background-color: #390099;
+    color: white;
+    border: none;
+    height: 45px;
+    width: 160px; /*este no se modifico como en la clase -tenia un 70$-*/
+    border-radius: 25px;
+}
+
+.container-img {
+    width: 50%;
+    background-image: url("globo.jpg"); /*la img tambien se puede aplicar desde el html y luego aplicarle prop css aca*/
+    background-repeat: no-repeat; /*hace que no se repita la imagen en caso de ser mas chica*/
+    background-position: center;
+    background-size: cover; /*ir probando estos backgrounds de img*/
+    border-radius: 20px; /*mismo tamaño que el recuadro para que los bordes sean iguales*/
+}
+
+/*aplicando la img desde html y añadiendo css al elem img, se pueden aplicar filtros ej. filter: blur (img borrosa) o invert (invertir colores)*/
+/*si hay más imagenes conviene darles una clase*/
